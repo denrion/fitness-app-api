@@ -1,6 +1,6 @@
 const Gender = Object.freeze({
-  MALE: 'MALE',
-  FEMALE: 'FEMALE',
+  MALE: 'Male',
+  FEMALE: 'Female',
 });
 
 module.exports = Gender;
