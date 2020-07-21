@@ -10,6 +10,7 @@ const {
   updateMyPassword,
   deleteMe,
 } = require('../controllers/authController');
+const isAuth = require('../middleware/isAuth');
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ router.post('/forgotPassword', forgotPassword);
 router.patch('/resetPassword/:token', resetPassword);
 
 // Routes below will go through isAuth middleware first
-// router.use(isAuth);
+router.use(isAuth);
 
 router.get('/me', getMe);
 router.patch('/updateMe', updateMe);
