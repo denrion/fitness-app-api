@@ -6,6 +6,8 @@ const setCorrectPluralSuffix = (string) => {
       ? 'ses'
       : string.endsWith('z')
       ? 'zes'
+      : string.endsWith('y')
+      ? 'ies'
       : 's';
 
   return `${string}${suffix}`;
