@@ -11,6 +11,8 @@ const ExerciseSchema = new mongoose.Schema(
     group: {
       type: String,
       enum: Object.values(ExerciseGroup),
+      required: [true, 'Group field is required'],
+      default: ExerciseGroup.ABS,
     },
     title: {
       type: String,
@@ -18,7 +20,7 @@ const ExerciseSchema = new mongoose.Schema(
     },
     videoURL: {
       type: String,
-      required: [true, 'Video url is required'],
+      required: [true, 'VideoURL is required'],
     },
   },
   {
