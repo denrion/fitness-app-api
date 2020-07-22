@@ -38,6 +38,10 @@ const TrainingSchema = new mongoose.Schema(
 // ******************* DOCUMENT MIDDLEWARE ****************** //
 
 // ******************** QUERY MIDDLEWARE ******************* //
+TrainingSchema.pre(/find/, function (next) {
+  this.populate('user');
+  next();
+});
 
 // **************** AGGREGATION MIDDLEWARE **************** //
 
