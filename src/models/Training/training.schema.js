@@ -4,13 +4,13 @@ const sanitizeMongooseFields = require('../../utils/mongoose/sanitizeMongooseFie
 const TrainingSchema = new mongoose.Schema(
   {
     color: { type: String, required: [true, 'Color is required '] },
-    name: {
-      type: String,
-      required: [true, 'Name is required'],
-    },
     date: {
       type: Date,
       required: [true, 'Date is required'],
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
     },
     exercises: [
       {
