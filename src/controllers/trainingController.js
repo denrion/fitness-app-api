@@ -20,7 +20,7 @@ const getAllTrainings = getAll(Training);
  * @route     GET /api/v1/Trainings/:TrainingId
  * @access    Private
  */
-const getTraining = getOne(Training);
+const getTraining = getOne(Training, { path: 'exercises' });
 
 /**
  * @desc      Create New Training
