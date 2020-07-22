@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const sanitizeMongooseFields = require('../../utils/mongoose/sanitizeMongooseFields');
+const MealSchema = require('./meal.schema');
 
 const MealPlanSchema = new mongoose.Schema(
   {
@@ -25,7 +26,7 @@ const MealPlanSchema = new mongoose.Schema(
     },
     meals: [
       {
-        type: MealPlanSchema,
+        type: MealSchema,
         required: [true, 'Meals are required'],
       },
     ],
