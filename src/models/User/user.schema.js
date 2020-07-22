@@ -85,6 +85,12 @@ const UserSchema = new mongoose.Schema(
 );
 
 // ************************ VIRTUALS ************************ //
+UserSchema.virtual('trainings', {
+  ref: 'Training',
+  localField: '_id',
+  foreignField: 'user',
+  justOne: false,
+});
 
 // ******************* DOCUMENT MIDDLEWARE ****************** //
 UserSchema.pre('save', hashPassword);
