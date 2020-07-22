@@ -8,9 +8,9 @@ const MealPlanSchema = new mongoose.Schema(
       type: Number,
       required: [true, 'Calories field is required'],
     },
-    carbonhydrates: {
+    carbohydrates: {
       type: Number,
-      required: [true, 'Carbonhydrates field is required'],
+      required: [true, 'Carbohydrates field is required'],
     },
     fat: {
       type: Number,
