@@ -19,7 +19,7 @@ const TrainingSchema = new mongoose.Schema(
     exercises: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Execise',
+        ref: 'Exercise',
       },
     ],
   },
