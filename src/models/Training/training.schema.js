@@ -12,7 +12,7 @@ const TrainingSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
     },
-    mealPlans: {
+    mealPlan: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'MealPlan',
     },
