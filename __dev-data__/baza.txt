@@ -1,0 +1,47 @@
+Models: 
+User: 
+	- email
+	- gender = MALE | FEMALE
+	- name: string
+
+Exercises:
+	- id
+	- description: string	
+	- group: enum = "abs" | "legs" | "shoulders" | "arms" | "back" | "cardio" | "chest"
+	- title: string
+	- videoURL: string
+	
+Intensity: 
+	- name: string
+	- color: string
+	- repetitios: number
+	- sets: number
+	- break: 2 mins
+
+Meal:
+	- mealId: number
+	- imageType: string
+	- readyInMinutes: 20
+	- servings: 3
+	- sourceUrl: string
+	- title: string
+
+MealPlan: 
+	- imageUrl: string
+	- calories: number
+	- carbohydrates: number
+	- fat: number
+	- protein: number
+	- title: string
+	- meal1: Meal
+	- meal2: Meal
+	- meal3: Meal
+
+Training:
+	- color: string
+	- details: 
+		- exercises: ExerciseIDs[]
+	- date: Date
+	- name: string
+
+	
