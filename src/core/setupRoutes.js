@@ -10,7 +10,7 @@ const setupRoutes = (app) => {
   app.use('/api/v1/users', userRouter);
   app.use('/api/v1/exercises', exerciseRouter);
   app.use('/api/v1/intensities', intensityRouter);
-  app.use('/api/v1/mealsPlans', mealPlanRouter);
+  app.use('/api/v1/mealPlans', mealPlanRouter);
   app.use('/api/v1/trainings', trainingRouter);
 };
 
