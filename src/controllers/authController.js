@@ -174,7 +174,7 @@ const getMe = catchAsync(async (req, res, next) => {
  */
 const updateMe = catchAsync(async (req, res, next) => {
   // Only allow update for specified fields
-  const filteredBody = filterReqBody(req.body, 'email');
+  const filteredBody = filterReqBody(req.body, 'email', 'name', 'gender');
 
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
