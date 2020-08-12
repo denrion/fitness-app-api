@@ -24,7 +24,11 @@ function updatePasswordChangedAt(next) {
 }
 
 // ******************** QUERY MIDDLEWARE ******************* //
+function getOnlyActiveUsers(next) {
+  this.find({ isActive: { $ne: false } });
+  next();
+}
 
 // **************** AGGREGATION MIDDLEWARE **************** //
 
-module.exports = { hashPassword, updatePasswordChangedAt };
+module.exports = { hashPassword, updatePasswordChangedAt, getOnlyActiveUsers };

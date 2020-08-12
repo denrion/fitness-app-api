@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
 const Role = require('../../constants/Role');
-const { hashPassword, updatePasswordChangedAt } = require('./user.middleware');
+const {
+  hashPassword,
+  updatePasswordChangedAt,
+  getOnlyActiveUsers,
+} = require('./user.middleware');
 const {
   signToken,
   isCorrectPassword,
@@ -97,6 +101,7 @@ UserSchema.pre('save', hashPassword);
 UserSchema.pre('save', updatePasswordChangedAt);
 
 // ******************** QUERY MIDDLEWARE ******************* //
+UserSchema.pre('findOne', getOnlyActiveUsers);
 
 // **************** AGGREGATION MIDDLEWARE **************** //
 
