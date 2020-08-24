@@ -22,6 +22,10 @@ const TrainingSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'MealPlan',
     },
+    intensity: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Intensity',
+    },
     exercises: [
       {
         type: mongoose.Schema.Types.ObjectId,

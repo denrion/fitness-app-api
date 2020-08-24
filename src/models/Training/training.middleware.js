@@ -1,6 +1,9 @@
 // ******************* DOCUMENT MIDDLEWARE ****************** /
 function populateDataOnFind(next) {
-  this.populate('user mealPlan exercises');
+  this.populate({
+    path: 'user exercises mealPlan intensity',
+    select: 'name title',
+  });
   next();
 }
 
