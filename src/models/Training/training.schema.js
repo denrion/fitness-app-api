@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const sanitizeMongooseFields = require('../../utils/mongoose/sanitizeMongooseFields');
-const { populateUserOnFind } = require('./training.middleware');
+const { populateDataOnFind } = require('./training.middleware');
 
 const TrainingSchema = new mongoose.Schema(
   {
@@ -40,7 +40,7 @@ const TrainingSchema = new mongoose.Schema(
 // ******************* DOCUMENT MIDDLEWARE ****************** //
 
 // ******************** QUERY MIDDLEWARE ******************* //
-TrainingSchema.pre(/find/, populateUserOnFind);
+TrainingSchema.pre(/find/, populateDataOnFind);
 
 // **************** AGGREGATION MIDDLEWARE **************** //
 

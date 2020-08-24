@@ -1,6 +1,6 @@
 // ******************* DOCUMENT MIDDLEWARE ****************** /
-function populateUserOnFind(next) {
-  this.populate('user');
+function populateDataOnFind(next) {
+  this.populate('user mealPlan exercises');
   next();
 }
 
@@ -9,5 +9,5 @@ function populateUserOnFind(next) {
 // **************** AGGREGATION MIDDLEWARE **************** //
 
 module.exports = {
-  populateUserOnFind,
+  populateDataOnFind,
 };
