@@ -17,19 +17,23 @@ const TrainingSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
+      required: true,
     },
     mealPlan: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'MealPlan',
+      required: true,
     },
     intensity: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Intensity',
+      required: true,
     },
     exercises: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Exercise',
+        required: true,
       },
     ],
   },
