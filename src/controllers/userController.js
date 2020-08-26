@@ -20,7 +20,7 @@ const getAllUsers = getAll(User);
  * @route     GET /api/v1/users/:userId
  * @access    Private
  */
-const getUser = getOne(User);
+const getUser = getOne(User, 'trainings');
 
 /**
  * @desc      Create New User
