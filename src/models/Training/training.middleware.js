@@ -2,7 +2,6 @@
 function populateDataOnFind(next) {
   this.populate({
     path: 'user exercises mealPlan intensity',
-    select: 'name title',
   });
   next();
 }
